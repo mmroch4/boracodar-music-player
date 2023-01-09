@@ -2,6 +2,11 @@
   "name": "boracodar-music-player",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Miguel Rocha",
+    "email": "miguelrocha.dev@gmail.com",
+    "url": "https://miguelrocha.dev"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -18,6 +23,12 @@
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
+    "react-use-audio-player": "^1.2.6",
     "typescript": "4.9.4"
+  },
+  "devDependencies": {
+    "@types/howler": "^2.2.7",
+    "sass": "^1.57.1"
   }
 }
