@@ -13,7 +13,7 @@ const nextConfig = {
     ],
   },
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'boracodar.miguelrocha.dev'],
   },
 };
 
