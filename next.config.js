@@ -12,6 +12,9 @@ const nextConfig = {
       path.join(__dirname, 'src', 'pages'),
     ],
   },
+  images: {
+    domains: ['localhost'],
+  },
 };
 
 module.exports = nextConfig;

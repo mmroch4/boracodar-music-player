@@ -1,0 +1,252 @@
+@import '../styles/colors';
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid $gray4;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+
+  padding: 2rem;
+
+  .placeholder {
+    width: 10rem;
+    height: 10rem;
+    background: $gray4;
+
+    margin-bottom: 1rem;
+
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+
+  h2,
+  p {
+    max-width: 15rem;
+
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 0.25rem;
+
+    &.blur {
+      width: 8rem;
+      height: 1.75rem;
+    }
+  }
+
+  p {
+    margin-bottom: 0.75rem;
+
+    &.blur {
+      width: 5rem;
+      height: 1.125rem;
+    }
+  }
+
+  .controls {
+    position: relative;
+
+    width: 10rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    margin-bottom: 0.5rem;
+
+    div {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background: transparent;
+
+      cursor: not-allowed;
+    }
+
+    button {
+      cursor: pointer;
+
+      background: none;
+
+      border: none;
+
+      svg {
+        width: 1.75rem;
+        height: 1.75rem;
+
+        fill: currentColor;
+      }
+
+      &:active svg {
+        fill: $gray11;
+      }
+    }
+
+    &.blur {
+      background: none;
+
+      button svg {
+        color: $gray4;
+      }
+    }
+  }
+
+  progress {
+    appearance: none;
+
+    width: 10rem;
+    height: 0.375rem;
+
+    margin-bottom: 0.5rem;
+  }
+
+  progress::-webkit-progress-bar {
+    background-color: $gray4;
+
+    border-radius: 99999px;
+    -webkit-border-radius: 99999px;
+    -moz-border-radius: 99999px;
+    -ms-border-radius: 99999px;
+    -o-border-radius: 99999px;
+  }
+
+  progress::-webkit-progress-value {
+    background-color: $blue9;
+
+    border-radius: 99999px;
+    -webkit-border-radius: 99999px;
+    -moz-border-radius: 99999px;
+    -ms-border-radius: 99999px;
+    -o-border-radius: 99999px;
+  }
+
+  .timer {
+    width: 10rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+
+    small.blur {
+      width: 1.625rem;
+      height: 0.9375rem;
+    }
+  }
+
+  .sound_panel {
+    width: 10rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 0.5rem;
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    input[type='range'] {
+      appearance: none;
+      -webkit-appearance: none;
+
+      flex: 1;
+
+      width: 8rem;
+      height: 0.375rem;
+
+      background: $gray4;
+
+      overflow: hidden;
+
+      border-radius: 99999px;
+      -webkit-border-radius: 99999px;
+      -moz-border-radius: 99999px;
+      -ms-border-radius: 99999px;
+      -o-border-radius: 99999px;
+    }
+
+    input[type='range']::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+
+      width: 0.375rem;
+      height: 0.375rem;
+
+      background: $blue9;
+
+      box-shadow: -10.1875rem 0 0 10rem $blue9;
+
+      border-radius: 99999px;
+      -webkit-border-radius: 99999px;
+      -moz-border-radius: 99999px;
+      -ms-border-radius: 99999px;
+      -o-border-radius: 99999px;
+    }
+
+    &.blur {
+      background: none;
+
+      svg {
+        color: $gray4;
+      }
+
+      div {
+        flex: 1;
+
+        width: 8rem;
+        height: 0.375rem;
+
+        background: $gray4;
+
+        border-radius: 99999px;
+        -webkit-border-radius: 99999px;
+        -moz-border-radius: 99999px;
+        -ms-border-radius: 99999px;
+        -o-border-radius: 99999px;
+      }
+    }
+  }
+}
+
+.blur {
+  background: $gray4;
+
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}

@@ -1,7 +1,34 @@
 @import '../styles/colors';
 
-.header {
-  padding: 1rem;
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  border-bottom: 1px solid $gray6;
+  gap: 2rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+
+      color: $gray11;
+    }
+
+    &:hover {
+      color: $blue9;
+
+      svg {
+        color: $gray12;
+      }
+    }
+
+    &:active {
+      color: $blue10;
+    }
+  }
 }
