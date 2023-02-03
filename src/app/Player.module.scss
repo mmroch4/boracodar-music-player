@@ -118,27 +118,55 @@
     }
   }
 
-  progress {
+  .timer_slider {
     appearance: none;
+    -webkit-appearance: none;
+
+    cursor: pointer;
+
+    flex: 1;
 
     width: 10rem;
     height: 0.375rem;
 
-    margin-bottom: 0.5rem;
-  }
+    background: $gray4;
 
-  progress::-webkit-progress-bar {
-    background-color: $gray4;
+    margin-bottom: 0.5rem;
+
+    overflow: hidden;
 
     border-radius: 99999px;
     -webkit-border-radius: 99999px;
     -moz-border-radius: 99999px;
     -ms-border-radius: 99999px;
     -o-border-radius: 99999px;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+
+      width: 0.375rem;
+      height: 0.375rem;
+
+      background: $blue9;
+
+      box-shadow: -10.1875rem 0 0 10rem $blue9;
+
+      border-radius: 99999px;
+      -webkit-border-radius: 99999px;
+      -moz-border-radius: 99999px;
+      -ms-border-radius: 99999px;
+      -o-border-radius: 99999px;
+    }
   }
 
-  progress::-webkit-progress-value {
-    background-color: $blue9;
+  .timer_slider_blur {
+    width: 10rem;
+    height: 0.375rem;
+
+    background: $gray4;
+
+    margin-bottom: 0.5rem;
 
     border-radius: 99999px;
     -webkit-border-radius: 99999px;
@@ -182,12 +210,16 @@
       appearance: none;
       -webkit-appearance: none;
 
+      cursor: pointer;
+
       flex: 1;
 
       width: 8rem;
       height: 0.375rem;
 
       background: $gray4;
+
+      margin-bottom: none;
 
       overflow: hidden;
 

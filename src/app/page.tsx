@@ -80,6 +80,7 @@ export default function Home() {
         nextTrack={nextTrack}
         togglePlayPause={togglePlayPause}
         changeVolume={changeVolume}
+        seek={seek}
       />
     </main>
   );

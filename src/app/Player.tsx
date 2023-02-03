@@ -27,6 +27,7 @@ interface Props {
   previousTrack: () => void;
   nextTrack: () => void;
   togglePlayPause: () => void;
+  seek: (position: number) => number;
 }
 
 export function Player({
@@ -41,6 +42,7 @@ export function Player({
   nextTrack,
   previousTrack,
   togglePlayPause,
+  seek,
 }: Props) {
   if (loading || !ready) {
     return (
@@ -67,7 +69,7 @@ export function Player({
           </button>
         </div>
 
-        <progress></progress>
+        <div className={styles.timer_slider_blur}></div>
 
         <div className={styles.timer}>
           <small className={styles.blur}></small>
@@ -115,7 +117,15 @@ export function Player({
         </button>
       </div>
 
-      <progress value={position} max={duration}></progress>
+      <input
+        type="range"
+        max={duration}
+        value={position}
+        onChange={(e) => {
+          seek(Number(e.target.value));
+        }}
+        className={styles.timer_slider}
+      />
 
       <div className={styles.timer}>
         <small>{formatSeconds(position)}</small>
